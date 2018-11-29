@@ -1,10 +1,9 @@
 # Exchange-Folders-Report
 This Powershell script will allow you to retreive number of folders in all users' mailbox
 
-//Configure Powershell Session to Exchange (do this even if running on Exchange server)
+//Configure Powershell Session to Exchange (do this even if running on Exchange server).  Use Server FQDN after ConnectionUri.  This can be found in My Computer > Properties. 
 
-PS C:\Windows\system32> $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri h
-ion.outlook.com/powershell-liveid/ -Credential $UserCredential - Authentication Basic -AllowRedirection
+PS C:\Windows\system32> $Session = PS C:\Windows\system32> $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://GPS-EXCHANGE.gps.local/PowerShell/ -Authentication Kerberos -Credential $UserCredential
 
 //Connect to Powershell session you created above
 
